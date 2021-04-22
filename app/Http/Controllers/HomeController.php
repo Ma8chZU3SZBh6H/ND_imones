@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $companies = Company::all();
+        $companies = Company::simplePaginate(6);
         return view('home', [
             'comapnies' => $companies
         ]);

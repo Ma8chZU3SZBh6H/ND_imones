@@ -55,11 +55,12 @@
     @endif
   
 </table>
+{{ $comapnies->links() }}
 <br>
 <form action="{{route('companies')}}" method="post">
     @csrf
     <label for="">Pavadinimas</label>
-    <input name="pavadinimas" type="text" value="test">
+    <input name="pavadinimas" type="text" value="test{{rand()}}">
     @error('pavadinimas')
         <label>{{$message}}</label>
     @enderror
