@@ -2,7 +2,7 @@
 
 @section('body')
 <h1>Imonės:</h1>
-<form action="{{route('companies.search')}}" method="post">
+<form action="{{route('home')}}" method="get">
     @csrf
     <label for="">Pajieška</label>
     <br>
@@ -55,7 +55,7 @@
     @endif
   
 </table>
-{{ $comapnies->links() }}
+{{ $comapnies->appends(Request::all())->links() }}
 <br>
 <form action="{{route('companies')}}" method="post">
     @csrf

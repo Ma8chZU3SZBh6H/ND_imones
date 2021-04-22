@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::post('/', [HomeController::class, 'show'])->name('companies.search');
+//Route::post('/', [HomeController::class, 'show'])->name('companies.search');
 
 Route::post('/store', [CompaniesController::class, 'store'])->name('companies');
 Route::delete('/delete/{company}', [CompaniesController::class, 'delete'])->name('companies.delete');
